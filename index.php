@@ -13,5 +13,11 @@
 		?>
 	</header>
 
+	<section>
+		<?php
+			include "slider.html";
+		?>
+	</section>
+
 </body>
 </html>

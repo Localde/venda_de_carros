@@ -1,35 +1,12 @@
-body {
-	margin:0 auto; /*Da margem a todos os objetos do site.*/
-	margin-top: 95px;
-	width:960px;
-	background-color: #000;
-	overflow:scroll;
-	overflow-x:hidden;
-	background-position: center;
-	background-size: 80%;
-	background-repeat: no-repeat;
-	background-image:url("carro_vetor.jpg");
-	/*background-repeat:repeat-x;*/
+#topo {
+	height: 200px;
+	background-color: grey;
+	left: 50%;
+
 }
 
-#logo_topo{
-	width: 301px;
-	height: 111px;
-	background-color: #000;
-	background-image: url(imgs/logo.svg);
-	float:left;
-}
-
-#menu{
-	width: 659px;
-	height: 111px;
-	background-color: none;
-	display: table-cell;
-	vertical-align: middle;
-	padding: 0px 0px 0px 250px;
-}
-
-.btmenu{
+.btmenu{	/*BOTÃO DO MENU*/
+	left: 50%;
 	text-decoration:none;
 	display:table-cell;
 	width:100px;
@@ -49,4 +26,10 @@ body {
 .btmenu:hover {
 	background-color: #c22;
 	color: #FFF;
+}
+
+#s1, #s2, #s3, #s4, #s5 {
+	width: 659px;
+	position: absolute;
+	opacity: 0%;
 }
