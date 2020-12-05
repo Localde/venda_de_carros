@@ -13,11 +13,28 @@
 		?>
 	</header>
 
-	<section>
+	<section id="slider">
 		<?php
 			include "slider.html";
 		?>
 	</section>
 
+	<section id="buscador">
+		<?php
+			include "buscador.php";
+		?>
+	</section>
+
+	<section id="destaques">
+		<?php
+			include "destaques.html";
+		?>
+	</section>
+
+	<footer id="rodape">
+		<?php
+			include "rodape.html";
+		?>
+	</footer>
 </body>
 </html>

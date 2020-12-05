@@ -21,6 +21,7 @@
 	font-family: Arial;
 	font-size:10px;
 	cursor: pointer;
+	border: 0px;
 }
 
 .btmenu:hover {
@@ -32,4 +33,104 @@
 	width: 659px;
 	position: absolute;
 	opacity: 0%;
+}
+
+#buscador {
+	width:960px;
+	margin:410px 0px 0px 0px;
+}
+
+#fbuscador {
+	display: flex;
+	border-radius: 15px;
+	border: 1px solid #ccc;
+	padding: 20px;
+}
+
+.divbusca {
+	margin: auto;
+	/*float: left;*/
+	display: inline;
+}
+
+label {
+	display: block;
+}
+
+.titulo {
+	font-size: 22px;
+	color: #BBB;
+	padding: 10px 0px 0px 0px;
+	margin: 0px 0px 10px 0px;
+}
+
+#destaques {
+	display: flex;
+	padding: 15px 0px;
+	border:1px solid #000;
+}
+
+.destaques {
+	margin:auto;
+	padding: 50px;
+	background: #000;
+	border-radius: 100%;
+}
+
+.destaques:hover {
+	background:#c22;
+}
+
+footer {
+	background: #2B2E38;
+	padding: 1px 20px;
+	margin: 15px 0px 0px 0px;
+}
+
+footer a {
+	text-decoration: none;
+	color: #111;
+}
+
+#main {
+	padding-top: 20px;
+
+}
+
+#f_login input[type=text], input[type=password] {
+	display: block;
+	margin-bottom: 15px;
+	padding: 10px;
+	font-size: 15px;
+	color: #888;
+	width: 300px;
+}
+
+#f_login label{
+	font-size: 20px;
+	color: #888;
+}
+
+#f_login input[type=submit] {
+	left: 50%;
+	text-decoration:none;
+	display:table-cell;
+	width:320px;
+	height:40px;
+	margin:0px;
+	padding:1px 5px 1px 5px;
+	background-color:#222;
+	text-align:center;
+	vertical-align:middle;
+	border-radius:10px;
+	color: #bbb;
+	font-family: Arial;
+	font-size:15px;
+	cursor: pointer;
+	border: 0px;
+}
+
+#f_login input[type=submit]:hover {
+	background-color: #c22;
+	color: #FFF;
 }
