@@ -134,3 +134,14 @@ footer a {
 	background-color: #c22;
 	color: #FFF;
 }
+
+#lgErro {
+	color: #f00;
+	font-size: 20px;
+	padding: 5px;
+	border: 5px solid #888;
+	border-radius: 10px;
+	background-color: #eee;
+	text-align: center;
+	width: 300px;
+}

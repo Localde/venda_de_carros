@@ -31,6 +31,18 @@
 					$chave1="abcdefghijklmnopqrstuvwxyz";
 					$chave2="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 					$chave3="0123456789";
+					$chave=str_shuffle($chave1.$chave2.$chave3);
+					$tam=strlen($chave);
+					$num="";
+					$qtde=rand(20,50);
+					for($i=0;$i<$qtde;$i++){
+						$pos=rand(0,$tam);
+						$num.=substr($chave, $pos, 1);
+					}
+					session_start();
+					$_SESSION['numlogin']=$num;
+					$_SESSION['username']=$user;
+					header("Location:gerenciamento.php?num=$num");
 				}
 			}
 		?>
