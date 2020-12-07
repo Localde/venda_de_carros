@@ -15,17 +15,18 @@
 
 	<section id="main">
 		<?php
+
+			include "conexao.inc";
+
 			if(isset($_POST["f_logar"])){
 				$user=$_POST["f_user"];
 				$senha=$_POST["f_senha"];
 
-				//MySQL
-					//PESQ. USER, SE EXISTIR
-					//OBTER USER E SENHA
-					//COMP. SENHA
+				$sql="SELECT * FROM tb_colaboradores WHERE username='$user' AND senha='$senha'";
+				$res=mysqli_query($con,$sql);
+				$ret=mysqli_affected_rows($con);
 
-
-				if(($user!="bruno") or ($senha!="123")) {
+				if($ret == 0) {
 					echo "<p id='lgErro'>Login incorreto</p>";
 				} else {
 					$chave1="abcdefghijklmnopqrstuvwxyz";
@@ -45,6 +46,9 @@
 					header("Location:gerenciamento.php?num=$num");
 				}
 			}
+
+			mysqli_close($con);
+
 		?>
 		<form action="login.php" method="post" name="f_login" id="f_login">
 			<label>Usuário</label>
