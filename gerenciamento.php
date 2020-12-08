@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Itaipú Veiculos</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="estilos.css"/>
+</head>
+<body>
+
+	<header>
+		<?php
+			include "topo.php";
+		?>
+	</header>
+
+	<section>
+		<p>Menu principal de gerenciamento</p>		
+	</section>
+
+	<nav>
+		<div class="menu_ger">
+			<button id="menua1" class="btmenu">carros</button>
+			<div id="munub1" class="menub">
+				<a href="#" target="_self">novo</a>
+				<a href="#" target="_self">editar</a>
+				<a href="#" target="_self">excluir</a>
+				<a href="#" target="_self">marcas</a>
+			</div>
+		</div>
+		<div class="menu_ger">
+			<button id="menua2" class="btmenu">slider</button>
+			<div id="menub2" class="menub">
+				<a href="#" target="_self">configurar</a>
+			</div>
+		</div>
+		<div class="menu_ger">
+			<button id="menua3" class="btmenu">usuarios</button>
+			<div id="menub3" class="menub">
+				<a href="#" target="_self">novo</a>
+				<a href="#" target="_self">editar</a>
+				<a href="#" target="_self">excluir</a>
+			</div>
+		</div>
+		<div class="menu_ger">
+			<button id="menua4" class="btmenu">logout</button>
+			<div id="menub4" class="menub">
+				<a href="#" target="_self">sair</a>
+			</div>
+		</div>
+	</nav>
+
+</body>
+</html>
