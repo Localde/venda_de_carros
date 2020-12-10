@@ -1,3 +1,17 @@
+<?php
+	session_start();
+	if(isset($_SESSION["numlogin"])){
+		$n1=$_GET["num"];
+		$n2=$_SESSION["numlogin"];
+		if($n1!=$n2){
+			echo "<p>Login não efetuado</p>";
+			exit;
+		}
+	}else{
+		echo "<p>Login não efetuado</p>";
+		exit;
+	}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

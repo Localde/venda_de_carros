@@ -24,7 +24,7 @@
 
 				$sql="SELECT * FROM tb_colaboradores WHERE username='$user' AND senha='$senha'";
 				$res=mysqli_query($con,$sql);
-				$ret=mysqli_affected_rows($con);
+				$ret=mysqli_fetch_array($res);
 
 				if($ret == 0) {
 					echo "<p id='lgErro'>Login incorreto</p>";
@@ -43,6 +43,7 @@
 					session_start();
 					$_SESSION['numlogin']=$num;
 					$_SESSION['username']=$user;
+					$_SESSION['acesso']=$ret['acesso'];//0=Restrito / 1=Total
 					header("Location:gerenciamento.php?num=$num");
 				}
 			}
