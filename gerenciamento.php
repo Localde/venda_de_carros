@@ -86,7 +86,7 @@
 		<div class="menu_ger">
 			<button id="menua3" class="btmenu">usuarios</button>
 			<div id="menub3" class="menub">
-				<a href="#" target="_self">novo</a>
+				<a href="novo_usuario.php?num=<?php echo $n1;?>" target="_self">novo</a>
 				<a href="#" target="_self">editar</a>
 				<a href="#" target="_self">excluir</a>
 			</div>
