@@ -83,14 +83,21 @@
 				<a href="#" target="_self">configurar</a>
 			</div>
 		</div>
-		<div class="menu_ger">
-			<button id="menua3" class="btmenu">usuarios</button>
-			<div id="menub3" class="menub">
-				<a href="novo_usuario.php?num=<?php echo $n1;?>" target="_self">novo</a>
-				<a href="#" target="_self">editar</a>
-				<a href="#" target="_self">excluir</a>
-			</div>
-		</div>
+
+		<?php
+		if($_SESSION['acesso']==1){
+			echo "	
+				<div class='menu_ger'>
+					<button id='menua3' class='btmenu'>usuarios</button>
+					<div id='menub3' class='menub'>
+						<a href='novo_usuario.php?num=$n1' target='_self'>novo</a>
+						<a href='#' target='_self'>editar</a>
+						<a href='#' target='_self'>excluir</a>
+					</div>
+				</div>
+			";
+		}	
+		?>
 		<div class="menu_ger">
 			<button id="menua4" class="btmenu">logout</button>
 			<div id="menub4" class="menub">
