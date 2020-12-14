@@ -92,7 +92,7 @@
 					<div id='menub3' class='menub'>
 						<a href='novo_usuario.php?num=$n1' target='_self'>novo</a>
 						<a href='#' target='_self'>editar</a>
-						<a href='#' target='_self'>excluir</a>
+						<a href='excluir_usuario.php?num=$n1' target='_self'>excluir</a>
 					</div>
 				</div>
 			";
