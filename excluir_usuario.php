@@ -35,6 +35,14 @@
 
 			if(isset($_GET["f_bt_excluir_colaborador"])) {
 				$vid=$_GET["f_colaboradores"];
+				$sql="DELETE FROM tb_colaboradores WHERE id_colaborador=$vid";
+				mysqli_query($con,$sql);
+				$linhas=mysqli_affected_rows($con);
+				if($linhas >= 1){
+					echo "<p>Colaborador deletado com sucesso</p>";
+				}else{
+					echo "<p>Erro ao deletar Colaborador</p>";
+				}
 			}
 
 		?>
@@ -43,7 +51,14 @@
 			<input type="hidden" name="num" value="<?php echo $n1; ?>">
 			<label>Selecione o Colaborador</label>
 			<select name="f_colaboradores" size="10">
-				<option value="id_col">nome_col</option>
+				<?php
+					$sql="SELECT * FROM tb_colaboradores";
+					$col=mysqli_query($con, $sql);
+					//$total_col=mysqli_num_rows($col);
+					while ($exibe=mysqli_fetch_array($col)) {
+						echo "<option value='".$exibe['id_colaborador']."'>".$exibe['nome']."</option>";
+					}
+				?>
 			</select>
 			<input type="submit" name="f_bt_excluir_colaborador" class="btmenu" value="excluir">
 		</form>	

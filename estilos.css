@@ -181,7 +181,7 @@ footer a {
 	width: 300px;
 }
 
-.f_colaborador input {
+.f_colaborador input, select {
 	display: block;
 	margin-bottom: 10px;
 	text-transform: uppercase;
