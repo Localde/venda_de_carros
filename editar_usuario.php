@@ -67,24 +67,29 @@
 					<input type='text' name='f_senha' size='50' maxlength='50' required='required' value='".$exibe['senha']."'>
 					<label>Acesso</label>
 					<input type='text' name='f_acesso' size='50' maxlength='50' required='required' value='".$exibe['acesso']."' placeholder='0 ou 1' pattern='[0-1]+$'>
-					<input type='submit' name='f_bt_editar_colaborador' class='btmenu' value='gravar'>
+					<input type='submit' name='f_bt_edita_colaborador' class='btmenu' value='gravar'>
 
 					";
 				}
 			}
-			/*
-			if(isset($_GET["f_bt_excluir_colaborador"])) {
-				$vid=$_GET["f_colaboradores"];
-				$sql="DELETE FROM tb_colaboradores WHERE id_colaborador=$vid";
-				mysqli_query($con,$sql);
+			
+			if(isset($_GET["f_bt_edita_colaborador"])) {
+				$vid=$_GET["id"];
+				$vnome=$_GET["f_nome"];
+				$vuser=$_GET["f_user"];
+				$vsenha=$_GET["f_senha"];
+				$vacesso=$_GET["f_acesso"];
+
+				$sql="UPDATE tb_colaboradores SET nome='$vnome', username='$vuser', senha='$vsenha', acesso='$vacesso' WHERE id_colaborador=$vid";
+				$res=mysqli_query($con,$sql);
 				$linhas=mysqli_affected_rows($con);
 				if($linhas >= 1){
-					echo "<p>Colaborador deletado com sucesso</p>";
+					header('Location:editar_usuario.php?num='.$n1);
 				}else{
-					echo "<p>Erro ao deletar Colaborador</p>";
+					echo "<p>Erro ao atualizar Colaborador</p>";
 				}
 			}
-			*/
+			
 
 		?>
 
