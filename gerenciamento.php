@@ -74,7 +74,7 @@
 				<a href="#" target="_self">novo</a>
 				<a href="#" target="_self">editar</a>
 				<a href="#" target="_self">excluir</a>
-				<a href="#" target="_self">marcas</a>
+				<a href="marcas_modelos.php?num=<?php echo $n1 ?>" target="_self">marcas / modelos</a>
 			</div>
 		</div>
 		<div class="menu_ger">
